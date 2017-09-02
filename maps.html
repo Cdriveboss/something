@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="maps.css" type="text/css">
+
+
+  <body>
+<script src="maps.js"></script>
+
+<a class="openmodal" href="#contact"  data-toggle="modal" data-id="Peggy Guggenheim Collection - Venice">Contact</a>
+
+  <div class="moda">
+    <div class="modal fade" id="contact" role="dialog" >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="back" >  
+          <div class="modal-header">
+          <h4>Contact Form<h4>
+          </div>
+          <div class="row">
+
+<div class="col-md-8 modal-body">    
+<div id="map"></div>
+</div>
+
+    <script>
+      function initMap() {
+        var uluru = {lat: 51.099382, lng: -0.19055570000000444};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ] 
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          icon: 'm1.png',
+          map: map
+
+        });
+        $('#contact').on('shown.bs.modal', function () {
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(uluru);
+})
+      }
+    </script>
+
+    <div class="col-md-4">
+
+    <form>
+
+    <div class="form-group col-md-12">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="Name" class="form-control" id="Name" placeholder="Name">
+    </div>
+
+    <div class="form-group col-md-12">
+      <label for="exampleInputEmail1">Surname</label>
+      <input type="Surname" class="form-control" id="Surname" placeholder="Surname">
+    </div>
+
+    <div class="form-group col-md-12">
+    <label for"message">Message</label>
+    <textarea type="message" class="form-control" id="Message" placeholder="Message">Message</textarea>
+    </div>
+
+    <div class="form-group col-md-12">
+    <input class="btn btn-default" type="button" value="Submit">
+    </div>
+
+    </form>
+
+    </div>
+
+    </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>      
+            </div>
+      </div>
+</div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFlaa8oGSyaGjF96E8t1_exvY9oglWgHM&callback=initMap">
+    </script>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
